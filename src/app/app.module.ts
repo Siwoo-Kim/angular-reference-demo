@@ -13,6 +13,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ComponentComponent } from './component/component.component';
 import { EmitterComponent } from './component/emitter/emitter.component';
 import { TwoWayComponent } from './component/two-way/two-way.component';
+import { NgmodelComponent } from './component/ngmodel/ngmodel.component';
+import { StructuralDirectiveComponent } from './component/structural-directive/structural-directive.component';
+import { TemplateVariableComponent } from './component/template-variable/template-variable.component';
+import { InputOutputComponent } from './component/input-output/input-output.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { SpyDirective } from './life-cycle/spy.directive';
+import { OnChangesComponent } from './life-cycle/on-changes/on-changes.component';
+import { ChildComponent } from './life-cycle/child/child.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +31,15 @@ import { TwoWayComponent } from './component/two-way/two-way.component';
     DashboardComponent,
     ComponentComponent,
     EmitterComponent,
-    TwoWayComponent
+    TwoWayComponent,
+    NgmodelComponent,
+    StructuralDirectiveComponent,
+    TemplateVariableComponent,
+    InputOutputComponent,
+    LifeCycleComponent,
+    SpyDirective,
+    OnChangesComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

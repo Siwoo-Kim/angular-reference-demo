@@ -1,0 +1,18 @@
+
+<div>
+  <app-child></app-child>
+</div>
+<hr>
+<input type="text" #newHero placeholder="hero name">
+<input type="text" #heroPower placeholder="hero power">
+<button (click)="createNewHero(newHero.value, heroPower.value)">create</button>
+<app-on-changes
+  [hero]="newHero"
+  [power]="power"></app-on-changes>
+
+<input #nameInput >
+<button (click)="addHero(nameInput.value)">Add</button>
+<button (click)="reset()">Reset</button>
+<div *ngFor="let hero of heroes" spy class="heroes">
+  {{hero | json }}
+</div>

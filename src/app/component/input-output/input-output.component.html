@@ -1,0 +1,15 @@
+
+
+<span>
+  {{ today | date :  'longDate' }}
+</span>
+
+<span>
+  The hero's feel is {{ currentHero.feel }}
+  The hero's feel is {{ $any(currentHero).feel }}
+</span>
+
+<app-hero-detail
+  [hero]="currentHero"
+
+  (deleteRequest)="deleteHero($event)"></app-hero-detail>

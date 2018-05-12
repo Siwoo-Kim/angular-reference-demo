@@ -1,0 +1,6 @@
+
+<span>{{ currentHero | json }}</span>
+<br>
+<input type="text" [value]="currentHero.name" (input)="currentHero.name = $event.target.value">
+<br>
+<input type="text" [ngModel]="currentHero.name" (ngModelChange)="currentHero.name = $event">

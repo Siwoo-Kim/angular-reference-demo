@@ -1,0 +1,16 @@
+
+
+<app-hero-detail  *ngIf="isActive"></app-hero-detail>
+<br>
+<button (click)="isActive = !isActive">Toggle</button>
+
+<div *ngFor="let hero of  heroService.getHeroes() | async; let i = index "> {{ i + 1 }} - {{ hero.name }}</div>
+<div *ngFor="let hero of  heroService.getHeroes() | async; let i = index; trackBy: trackByHero"> {{ i + 1 }} - {{ hero.name }}</div>
+
+
+
+<div [ngSwitch]="emotion">
+  <span *ngSwitchCase="'despress'">Despress</span>
+  <span *ngSwitchCase="'Sad'">Sad</span>
+  <span *ngSwitchCase="'happy'">Happy</span>
+</div>
