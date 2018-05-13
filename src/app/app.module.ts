@@ -21,6 +21,13 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { SpyDirective } from './life-cycle/spy.directive';
 import { OnChangesComponent } from './life-cycle/on-changes/on-changes.component';
 import { ChildComponent } from './life-cycle/child/child.component';
+import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
+import { HeroChildComponent } from './component-interaction/hero-child/hero-child.component';
+import { NameChildComponent } from './component-interaction/name-child/name-child.component';
+import { VersionChildComponent } from './component-interaction/version-child/version-child.component';
+import { VoterComponent } from './component-interaction/voter/voter.component';
+import { CountdownTimerComponent } from './component-interaction/countdown-timer/countdown-timer.component';
+import { MissionControlComponent } from './component-interaction/mission-control/mission-control.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +46,14 @@ import { ChildComponent } from './life-cycle/child/child.component';
     LifeCycleComponent,
     SpyDirective,
     OnChangesComponent,
-    ChildComponent
+    ChildComponent,
+    ComponentInteractionComponent,
+    HeroChildComponent,
+    NameChildComponent,
+    VersionChildComponent,
+    VoterComponent,
+    CountdownTimerComponent,
+    MissionControlComponent
   ],
   imports: [
     BrowserModule,

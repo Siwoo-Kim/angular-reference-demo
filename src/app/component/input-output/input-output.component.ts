@@ -25,7 +25,7 @@ export class InputOutputComponent implements OnInit {
       )
       .subscribe(hero => {
         this.currentHero = hero;
-        this.currentHero.feel = 'good';
+        /*this.currentHero.feel = 'good';*/
       });
   }
 
