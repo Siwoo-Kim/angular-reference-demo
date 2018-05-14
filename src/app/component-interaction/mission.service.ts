@@ -10,11 +10,11 @@ export class MissionService {
   missionConfirmed$ = this.missionConfirmedSource.asObservable();
 
   announceMission(mission: string) {
-    this.missionAnnouncedSource.next(misson);
+    this.missionAnnouncedSource.next(mission);
   }
 
   confirmMission(astronaut: string) {
-    this.missionConfirmedSource.next(mission);
+    this.missionConfirmedSource.next(astronaut);
   }
 
 }

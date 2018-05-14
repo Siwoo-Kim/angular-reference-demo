@@ -28,6 +28,13 @@ import { VersionChildComponent } from './component-interaction/version-child/ver
 import { VoterComponent } from './component-interaction/voter/voter.component';
 import { CountdownTimerComponent } from './component-interaction/countdown-timer/countdown-timer.component';
 import { MissionControlComponent } from './component-interaction/mission-control/mission-control.component';
+import { FormsComponent } from './forms/forms.component';
+import { KeyupComponent } from './forms/keyup/keyup.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { MatFormFieldModule, MatSelectModule, MatInputModule, MatButtonModule } from '@angular/material';
+import { TemplateFormComponent } from './template-form/template-form.component';
+import { HeroFormComponent } from './template-form/hero-form/hero-form.component'
+
 
 @NgModule({
   declarations: [
@@ -53,11 +60,20 @@ import { MissionControlComponent } from './component-interaction/mission-control
     VersionChildComponent,
     VoterComponent,
     CountdownTimerComponent,
-    MissionControlComponent
+    MissionControlComponent,
+    FormsComponent,
+    KeyupComponent,
+    TemplateFormComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatInputModule,
     AppRoutingModule,
   ],
   providers: [

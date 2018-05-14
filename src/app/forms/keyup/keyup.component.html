@@ -1,0 +1,7 @@
+<input #box type="text"
+       (keyup.enter)="onEnter(box.value)"
+       (blur)="onEnter(box.value)">
+
+<p>{{values2}}</p>
+<input  (keyup)="onKey($event)">
+<p>{{values}}</p>

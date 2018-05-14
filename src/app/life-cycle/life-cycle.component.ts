@@ -29,9 +29,9 @@ export class LifeCycleComponent implements OnInit, AfterViewInit {
     this.heroes = HEROES.slice();
   }
 
-  createNewHero(name: string, power: string) {
+  createNewHero(name: any, power: string) {
     this.newHero = null;
-    this.newHero = {name: name};
+    this.newHero = {name: name, id: null};
     this.power = power;
   }
 

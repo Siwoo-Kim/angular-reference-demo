@@ -12,6 +12,7 @@ export class MissionControlComponent implements OnInit {
   history: string[] = [];
   missions = ['Fly to the moon!', 'Fly to mars!', 'Fly t o Vegas!'];
   nextMission = 0;
+
   constructor(private missionService: MissionService) {
     this.missionService
       .missionConfirmed$
@@ -20,14 +21,11 @@ export class MissionControlComponent implements OnInit {
 
   announce() {
     let mission = this.missions[this.nextMission++];
-    this.missionService.announceMission(misson);
-    this.history.push(`Mission ${misson} announced`);
+    this.missionService.announceMission(mission);
+    this.history.push(`Mission ${mission} announced`);
     if(this.nextMission >= this.missions.length) { this.nextMission = 0; }
   }
   ngOnInit() {
   }
 
-  announce() {
-
-  }
 }

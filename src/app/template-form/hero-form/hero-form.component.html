@@ -1,0 +1,42 @@
+{{diagnostic}}
+
+<button mat-raised-button (click)="newHero(); form.reset()">New Hero</button>
+<div class="container">
+  <h1>Hero Form</h1>
+  <form #form="ngForm">
+    <mat-form-field>
+      <input type="text"
+             matInput
+             name="name"
+             [(ngModel)]="model.name"
+             #spy="ngModel"
+             required
+             pattern="[a-zA-Z ]*"
+             placeholder="name">
+      <mat-error *ngIf="!spy.hasError('pattern')">Error Required</mat-error>
+      <mat-error *ngIf="spy.hasError('pattern')">Error Pattern</mat-error>
+    </mat-form-field>
+    <p>
+      TODO: remove this <strong>{{ getNgClass(spy) }}</strong>
+    </p>
+    <br>
+    <mat-form-field>
+      <input type="text"
+             matInput
+             [(ngModel)]="model.alterEgo"
+             name="alterEgo"
+             required placeholder="alter ego">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-select placeholder="Hero Power" [(value)]="model.power" required>
+        <mat-option *ngFor="let power of powers" [value]="power">
+          {{ power }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p>{{model.power}} Selected</p>
+    <button mat-button >Submit</button>
+  </form>
+
+</div>
